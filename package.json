@@ -1,0 +1,22 @@
+{
+  "name": "epicbrief",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@commitlint/config-nx-scopes": "^17.4.3",
+    "@commitlint/cz-commitlint": "^17.4.4",
+    "@nrwl/nx-cloud": "latest",
+    "@nrwl/workspace": "15.8.6",
+    "commitizen": "^4.3.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
+    "nx": "15.8.6",
+    "prettier": "^2.6.2"
+  }
+}
