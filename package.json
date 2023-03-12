@@ -18,5 +18,8 @@
     "lint-staged": "^13.2.0",
     "nx": "15.8.6",
     "prettier": "^2.6.2"
+  },
+  "dependencies": {
+    "@nrwl/react": "^15.8.6"
   }
 }
