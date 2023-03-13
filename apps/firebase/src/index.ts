@@ -1,22 +1,15 @@
-// The Cloud Functions for Firebase SDK to create Cloud Functions and setup triggers.
 import * as functions from "firebase-functions";
-
-// The Firebase Admin SDK to access Firebase Features from within Cloud Functions.
+import { testHandler } from "./http/epicbrief";
+import { syncWithHubspotHandler } from "./http/hubspot";
 import * as admin from "firebase-admin";
+
 admin.initializeApp();
 
-// Set up extra settings. Since May 29, 2020, Firebase Firebase Added support for
-// calling FirebaseFirestore.settings with { ignoreUndefinedProperties: true }.
-// When this parameter is set, Cloud Firestore ignores undefined properties
-// inside objects rather than rejecting the API call.
 admin.firestore().settings({
 	ignoreUndefinedProperties: true,
 });
 
-// Start writing Firebase Functions
-// https://firebase.google.com/docs/functions/typescript
-
-export const helloWorld = functions.https.onRequest((request, response) => {
-	functions.logger.info("Hello logs!", { structuredData: true });
-	response.send("Hello from Firebase!");
-});
+export const test = functions.https.onRequest(testHandler);
+export const syncWithHubspot = functions.https.onRequest(
+	syncWithHubspotHandler
+);
