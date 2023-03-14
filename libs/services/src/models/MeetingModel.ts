@@ -1,3 +1,4 @@
+import { Timestamp } from "firebase/firestore";
 import { BaseModel } from "./Base";
 
 export interface MeetingModel extends BaseModel {
@@ -7,10 +8,10 @@ export interface MeetingModel extends BaseModel {
 			hubspotId: string;
 			name: string;
 		};
-		createdAt: string;
+		createdAt: Timestamp;
 		hubspotId: string;
 		nextSteps: string;
 		title: string;
-		updatedAt: string;
+		updatedAt: Timestamp;
 	};
 }
