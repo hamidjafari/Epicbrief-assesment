@@ -15,7 +15,8 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
-			"@epicbrief/services": ["libs/services/src/index.ts"]
+			"@epicbrief/services": ["libs/services/src/index.ts"],
+			"@epicbrief/shared-ui": ["libs/shared-ui/src/index.ts"]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]
